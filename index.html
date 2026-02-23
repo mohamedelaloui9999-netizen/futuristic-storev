@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOHAMED AL-ALOUI | NEURO-STORE 2090</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --neon-cyan: #00f3ff;
+      --neon-purple: #bc13fe;
+      --bg-dark: #020205;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: #fff;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+      /* خلفية متحركة تعطي شعور الفضاء الرقمي */
+      background: radial-gradient(circle at center, #0a0a2e 0%, #020205 100%);
+    }
+
+    /* تأثير الـ Matrix الخلفي */
+    body::before {
+      content: ""; position: fixed; inset: 0;
+      background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+      opacity: 0.1; pointer-events: none;
+    }
+
+    /* شاشة الدخول للمستقبل */
+    #loading {
+      position: fixed; inset: 0; background: #000; z-index: 9999;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+    }
+    .scanner {
+      width: 200px; height: 2px; background: var(--neon-cyan);
+      box-shadow: 0 0 15px var(--neon-cyan);
+      animation: scan 2s ease-in-out infinite;
+    }
+    @keyframes scan { 0%, 100% { transform: translateY(-50px); } 50% { transform: translateY(50px); } }
+
+    .nav-2090 {
+      padding: 25px; border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+      backdrop-filter: blur(15px); display: flex; justify-content: space-between;
+      align-items: center; sticky: top; z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.8rem; font-weight: 900; color: #fff; text-decoration: none;
+      text-shadow: 0 0 10px var(--neon-cyan); letter-spacing: 2px;
+    }
+
+    .hero-section {
+      text-align: center; padding: 80px 20px;
+    }
+
+    .hero-section h1 {
+      font-size: 4rem; margin: 0;
+      background: linear-gradient(to bottom, #fff, var(--neon-cyan));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+    }
+
+    .grid-2090 {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px; padding: 40px; max-width: 1400px; margin: auto;
+    }
+
+    /* الكرت الخرافي */
+    .hologram-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px; padding: 30px; transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative; overflow: hidden; backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    .hologram-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 40px rgba(0, 243, 255, 0.15);
+      background: rgba(0, 243, 255, 0.05);
+    }
+
+    .hologram-card img {
+      width: 100%; height: 250px; object-fit: contain;
+      filter: drop-shadow(0 0 20px var(--neon-cyan));
+      transition: 0.5s;
+    }
+
+    .hologram-card:hover img { transform: scale(1.1) rotate(-3deg); }
+
+    .price {
+      font-size: 2rem; color: var(--neon-cyan); font-weight: bold;
+      margin: 20px 0; text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+    }
+
+    .action-btn {
+      width: 100%; padding: 15px; border-radius: 50px; border: 1px solid var(--neon-cyan);
+      background: transparent; color: #fff; font-weight: bold; cursor: pointer;
+      transition: 0.4s; text-transform: uppercase;
+    }
+
+    .action-btn:hover {
+      background: var(--neon-cyan); color: #000;
+      box-shadow: 0 0 25px var(--neon-cyan);
+    }
+
+    footer {
+      text-align: center; padding: 60px; border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .social-btn {
+      color: var(--neon-cyan); font-size: 1.5rem; margin: 0 20px;
+      text-decoration: none; transition: 0.3s;
+    }
+    .social-btn:hover { color: var(--neon-purple); transform: scale(1.2); }
+
+  </style>
+</head>
+<body>
+
+  <div id="loading">
+    <div class="scanner"></div>
+    <p style="letter-spacing: 5px; margin-top: 20px; color: var(--neon-cyan);">LINKING TO 2090 NEURAL NETWORK...</p>
+  </div>
+
+  <nav class="nav-2090">
+    <a href="#" class="logo">M.A.A | 2090</a>
+    <div style="color: var(--neon-cyan); font-size: 0.8rem; border: 1px solid; padding: 5px 10px; border-radius: 20px;">
+      STATUS: ENCRYPTED | MOROCCO 🇲🇦
+    </div>
+  </nav>
+
+  <header class="hero-section">
+    <p style="color: var(--neon-purple); letter-spacing: 5px; margin-bottom: 0;">PREMIUM TECH SYNDICATE</p>
+    <h1>MOHAMED AL-ALOUI</h1>
+    <p style="opacity: 0.7;">مستقبل التجارة الرقمية بين يديك 👿</p>
+  </header>
+
+  <main id="products-grid" class="grid-2090"></main>
+
+  <footer>
+    <div style="margin-bottom: 30px;">
+      <a href="mailto:mohamedelaloui333@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+      <a href="https://instagram.com/m.o.h.a.m.e.d.9.9.9.9" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p style="opacity: 0.3; font-size: 0.8rem;">SYSTEM VERSION: 9.0.4 | © 2090 AL-ALOUI</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <script>
+    // بياناتك الكاملة والمربوطة 100%
+    const firebaseConfig = {
+      apiKey: "AIzaSyAS7skn241U3yge8x30jre2c54f2c7ca3a6", 
+      authDomain: "mohamed-future-store.firebaseapp.com",
+      projectId: "mohamed-future-store",
+      storageBucket: "mohamed-future-store.firebasestorage.app",
+      messagingSenderId: "14246138837",
+      appId: "1:14246138837:web:2c54f2c7ca3a6b6b6b6b6b"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    function bootSystem() {
+      const grid = document.getElementById('products-grid');
+      db.collection("منتجات").get().then((snapshot) => {
+        grid.innerHTML = "";
+        document.getElementById('loading').style.display = 'none';
+        snapshot.forEach((doc) => {
+          const item = doc.data();
+          grid.innerHTML += `
+            <div class="hologram-card">
+              <img src="${item.صورة}" alt="Tech">
+              <h2 style="color: #fff;">${item.اسم}</h2>
+              <div class="price">${item.سعر} $</div>
+              <button class="action-btn" onclick="window.location.href='mailto:mohamedelaloui333@gmail.com?subject=Order:${item.اسم}'">
+                إرسال إشارة طلب 📡
+              </button>
+            </div>`;
+        });
+      });
+    }
+    window.onload = bootSystem;
+  </script>
+</body>
+</html>
